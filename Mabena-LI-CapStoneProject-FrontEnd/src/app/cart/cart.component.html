@@ -1,0 +1,28 @@
+<h2>Products in the Cart</h2>
+<table class="table">
+    <thead>
+
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of productItems">
+            <td>
+                {{product.id}}
+            </td>
+            <td>
+                {{product.name}}
+            </td>
+            <td>
+                {{product.price}}sssssss
+            </td>
+        </tr>
+        <tr colspan="3">
+            Total:
+        </tr>
+    </tbody>
+</table>

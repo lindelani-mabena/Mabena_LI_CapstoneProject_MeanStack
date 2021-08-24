@@ -1,0 +1,121 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Lindelani",
+      "email": "lindelani.mngomezulu@gmail.com",
+      "username": "Mabena",
+      "password": "Mabena123",
+      "confirmPassword": "Mabena123",
+      "type": "",
+      "phoneNumber": 760372551
+    },
+    {
+      "id": 2,
+      "fullName": "mmdmdmd",
+      "email": "mdmdmdd@dmmfmfm.com",
+      "username": "dmmdmdmdmd",
+      "password": "Mabn",
+      "confirmPassword": "Mabn",
+      "type": "",
+      "phoneNumber": 99299292
+    },
+    {
+      "id": 3,
+      "fullName": "Lindelani Mabena ",
+      "email": "216074173@student.uj.ac.za",
+      "username": "kdkdkdk",
+      "password": "Lind",
+      "confirmPassword": "Lind",
+      "type": "",
+      "phoneNumber": 790226668
+    },
+    {
+      "id": 4,
+      "fullName": "K",
+      "email": "k@",
+      "username": "K",
+      "password": "K",
+      "confirmPassword": "K",
+      "type": "",
+      "phoneNumber": 1818881811818
+    },
+    {
+      "id": 5,
+      "fullName": "K",
+      "email": "K",
+      "username": "K",
+      "password": "K",
+      "confirmPassword": "K",
+      "type": "",
+      "phoneNumber": 55555555555
+    },
+    {
+      "id": 6,
+      "fullName": "H",
+      "email": "H",
+      "username": "H",
+      "password": "H",
+      "confirmPassword": "H",
+      "type": "",
+      "phoneNumber": 8
+    },
+    {
+      "id": 7,
+      "fullName": "Q",
+      "email": "Q",
+      "username": "Q",
+      "password": "Q",
+      "confirmPassword": "Q",
+      "type": "",
+      "phoneNumber": 1
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "ssjsjsjsj",
+      "lastName": "jsjjsjsjsj",
+      "email": "jjsjdj@jdjdjdj",
+      "phoneNumber": 8383838383,
+      "message": "dhhhhhhhhhhhhhhhhhhhhhhhhhh"
+    },
+    {
+      "id": 2,
+      "firstName": "ssjsjsjsjddmdmd4",
+      "lastName": "jsjjsjsjsjdmdmdm",
+      "email": "jjsjdj@jdjdjdjdddjjd",
+      "phoneNumber": 8383838383383839000,
+      "message": "dhhhhhhhhhhhhhhhhhhhhhhhhhh"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Cooking Oil",
+      "price": "50",
+      "imageUrl": "//image.jpg",
+      "quantity": 100,
+      "description": "for deep frying",
+      "category": "Cooking"
+    },
+    {
+      "id": 2,
+      "name": "Cleaning",
+      "price": "29",
+      "imageUrl": "//image.jpg",
+      "quantity": 40,
+      "description": "just to clean",
+      "category": "Cleaning"
+    },
+    {
+      "id": 3,
+      "name": "Domestos",
+      "price": "56",
+      "imageUrl": "https://image2.jpg",
+      "quantity": 40,
+      "description": "just to disinfect",
+      "category": "Cleaning"
+    }
+  ]
+}
