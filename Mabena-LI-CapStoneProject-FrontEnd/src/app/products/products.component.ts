@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpConnectionService } from '../http-connection.service';
 import { Product } from '../models/product';
 import { CartService } from '../services/cart.service';
@@ -11,7 +12,8 @@ import { CartService } from '../services/cart.service';
 export class ProductsComponent implements OnInit {
 
   listProducts: Array<Product> = [];
-  constructor(private _HttpConnectionService: HttpConnectionService, private _CartService:CartService) { 
+  cartItems =[];
+  constructor(private _HttpConnectionService: HttpConnectionService, private _CartService:CartService, private _Router:Router) { 
 
   }
   ngOnInit(): void {
@@ -28,7 +30,20 @@ export class ProductsComponent implements OnInit {
 
   buyThisProduct(productItem)
   {
+    this.cartItems = this._CartService.retrieveCartItemsFromLocalStorage();
+    for (var i=0; i< this.cartItems.length;i++)
+    {
+      if(productItem.id ==this.cartItems[i].id)
+      {
+        alert("product is already in cart");
+        return;
+      }
+    }
+
     this._CartService.addItemToCart(productItem);
+    alert(productItem.name +" item added to the cart");
+    this._Router.navigate(['/cart']);
+
   }
 
 }

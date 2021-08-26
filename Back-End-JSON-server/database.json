@@ -125,6 +125,36 @@
       "quantity": 40,
       "description": "just to disinfect",
       "category": "Cleaning"
+    },
+    {
+      "brand": "hshs",
+      "name": "Domestos",
+      "price": "56",
+      "imageUrl": "https://image2.jpg",
+      "quantity": 40,
+      "description": "just to disinfect",
+      "category": "Cleaning",
+      "id": 4
+    },
+    {
+      "brand": "hshs",
+      "name": "Domestos",
+      "price": "56",
+      "imageUrl": "https://image2.jpg",
+      "quantity": 40,
+      "description": "just to disinfect",
+      "category": "Cleaning",
+      "id": 5
+    },
+    {
+      "brand": "hshs",
+      "name": "Domestos",
+      "price": "56",
+      "imageUrl": "https://image2.jpg",
+      "quantity": 40,
+      "description": "just to disinfect",
+      "category": "Cleaning",
+      "id": 6
     }
   ]
 }

@@ -27,4 +27,10 @@ export class CartService {
     return this.productItems;
   }
 
+  deleteCartItems()
+  {
+    localStorage.removeItem('savedItems');
+    alert("Cart is emptied")
+  }
+
 }

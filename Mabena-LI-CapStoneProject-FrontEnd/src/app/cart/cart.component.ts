@@ -19,4 +19,24 @@ export class CartComponent implements OnInit {
 
   }
 
+  EmptyCart()
+  {
+    this._CartService.deleteCartItems();
+  }
+
+  removeFromCart(id)
+  {
+    alert("attempting to delete item");
+      for(var i=0; i< this.productItems.length;i++)
+      {
+        let item = this.productItems[i];
+        if(item.id==id)
+        {
+          this.productItems.splice(i, 1);
+          break;
+        }
+      }
+      localStorage.setItem('savedItems', JSON.stringify(this.productItems));
+  }
+
 }

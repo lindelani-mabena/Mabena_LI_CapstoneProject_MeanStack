@@ -6,7 +6,7 @@
             <th>Id</th>
             <th>Name</th>
             <th>Price</th>
-            
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -18,11 +18,17 @@
                 {{product.name}}
             </td>
             <td>
-                {{product.price}}sssssss
+                R{{product.price}}
+            </td>
+            <td>
+                <button class=" btn btn-danger" (click)="removeFromCart(product.id)">Remove</button>
+                
             </td>
         </tr>
-        <tr colspan="3">
-            Total:
-        </tr>
     </tbody>
+
 </table>
+
+<button routerLink="/checkout" class="btn btn-sm btn-outline-secondary">Check out</button>|
+<a href="/cart" type="button" (click)="EmptyCart()" class="btn btn-sm btn-outline-secondary">Empty Cart </a>|
+<button routerLink="/products" class="btn btn-sm btn-outline-secondary">Continue shopping </button>
