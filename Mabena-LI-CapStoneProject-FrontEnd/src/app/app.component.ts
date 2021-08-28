@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationGuardAdminService } from './services/authentication-guard-admin.service';
 import { AuthenticationGuardService } from './services/authentication-guard.service';
 
 @Component({
@@ -9,7 +11,7 @@ import { AuthenticationGuardService } from './services/authentication-guard.serv
 export class AppComponent {
   title = 'Mabena-LI-CapStoneProject-FrontEnd';
 
-  constructor(private _authentication: AuthenticationGuardService)
+  constructor(private _authentication: AuthenticationGuardService, private _authenticationAdmin:AuthenticationGuardAdminService, private _Router:Router)
   {
     
   }
@@ -25,5 +27,9 @@ export class AppComponent {
   logout()
   {
     this._authentication.logOut();
+    this._authenticationAdmin.logOut();
+    localStorage.clear();
+    alert("You are logged out successfully");
+    this._Router.navigate(['/login'])
   }
 }

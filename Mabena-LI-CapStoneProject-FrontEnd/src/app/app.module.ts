@@ -18,6 +18,9 @@ import { ProductsComponent } from './products/products.component';
 import { ProductMoreInfoComponent } from './product-more-info/product-more-info.component';
 import { CartComponent } from './cart/cart.component';
 import { CheckOutCartComponent } from './check-out-cart/check-out-cart.component';
+import { AdminComponentComponent } from './admin-component/admin-component.component';
+import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
+import { AdminUpdateProductComponent } from './admin-update-product/admin-update-product.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { CheckOutCartComponent } from './check-out-cart/check-out-cart.component
     ProductsComponent,
     ProductMoreInfoComponent,
     CartComponent,
-    CheckOutCartComponent
+    CheckOutCartComponent,
+    AdminComponentComponent,
+    AdminAddProductComponent,
+    AdminUpdateProductComponent
   ],
   imports: [
     BrowserModule,

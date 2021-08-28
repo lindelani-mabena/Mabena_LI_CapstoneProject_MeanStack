@@ -1,6 +1,9 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { error } from 'protractor';
 import { HttpConnectionService } from '../http-connection.service';
+import { LoginModelReturn } from '../models/login-model-return';
 import { User } from '../models/user';
 import { UserLogin } from '../models/user-login';
 
@@ -12,40 +15,45 @@ import { UserLogin } from '../models/user-login';
 export class LoginComponent implements OnInit {
   usersList: Array<User> = [];
   userLogin: UserLogin = new UserLogin();
+  loginModel :LoginModelReturn = new LoginModelReturn();
 
   constructor(private _HttpConnectionService: HttpConnectionService, private _Router:Router) { }
 
   ngOnInit(): void {
   }
 
-  Login() {
-    if (this.UserLoggedIn()) {
-      alert('You are successfully logged in,');
-      
-      localStorage.setItem('isLoggedIn', "true")
-      return;
-    } else {
-      alert("Login failed, please try again")
-    }
-  }
-  UserLoggedIn():boolean {
-    this._HttpConnectionService.getAllUsers().subscribe((result) => {
 
-      this.usersList = result;
-      console.log("Users is "+result);
-    }, (error) => {
-      alert("Error found, it is " + error);
-    });
+  Login()
+  {
+    this._HttpConnectionService.Login(this.userLogin).subscribe((result)=>
+    {
+      this.loginModel = result;
+      console.log(this.userLogin.username);
+      console.log(this.userLogin.password);
+      console.log(this.loginModel.isLoggedIn);
+      console.log(this.loginModel.type);
+      if((this.loginModel.isLoggedIn) ==true)
+      {
+        alert("Successfull login");
 
-
-    for (var UserF of this.usersList) {
-      if ((this.userLogin.username == UserF.username) && (this.userLogin.password == UserF.password)) {
-        console.log("User is found");
-        return true;
+        if(this.loginModel.type=="admin")
+        {
+          localStorage.setItem('isAdminLoggedIn',"true")
+          this._Router.navigate(['/admin-page']);
+        }
+        else{
+          localStorage.setItem('isLoggedIn',"true")
+          this._Router.navigate(['/products']);
+        }        
       }
-    }
-    console.log("Not found");
-    return false;
+      else{
+        alert("Login failed, please try again")
+      }
+    },(error)=>
+    {
+
+    })
   }
+  
 }
 

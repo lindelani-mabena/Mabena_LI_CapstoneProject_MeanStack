@@ -11,7 +11,7 @@ import { CartService } from '../services/cart.service';
 })
 export class ProductMoreInfoComponent implements OnInit {
 
-  id: any;
+  id: string;
   selectedProduct:Product;
   cartItems =[];
 
@@ -23,7 +23,8 @@ export class ProductMoreInfoComponent implements OnInit {
     this._HttpConnectionService.getProductById(this.id).subscribe((result)=>
     {
       console.log("result is "+ result)
-      this.selectedProduct =result;
+      this.selectedProduct = result;
+      console.log("selected "+this.selectedProduct._id);
     },(error)=>
     {
       console.log("error is " + error);
@@ -37,7 +38,7 @@ export class ProductMoreInfoComponent implements OnInit {
     this.cartItems = this._CartService.retrieveCartItemsFromLocalStorage();
     for (var i=0; i< this.cartItems.length;i++)
     {
-      if(selectedProduct.id ==this.cartItems[i].id)
+      if(selectedProduct._id ==this.cartItems[i]._id)
       {
         alert("product is already in cart");
         return;

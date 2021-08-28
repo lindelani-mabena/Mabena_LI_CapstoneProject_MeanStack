@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 
 
 var productSchema = mongoose.Schema({
-
     name: String,
     price: Number,
     brand: String,
@@ -15,8 +14,6 @@ var productSchema = mongoose.Schema({
         type:Date,
         default:Date.Now,
     }
-
-
-})
+});
 
 module.exports = mongoose.model('Product', productSchema);

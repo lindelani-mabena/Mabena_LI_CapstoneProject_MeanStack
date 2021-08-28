@@ -1,10 +1,9 @@
 export class UserLogin {
 
-    username: String = "";
-    password: String = "";
+    username: string = "";
+    password: string = "";
 
     constructor()
     {
-
     }
 }

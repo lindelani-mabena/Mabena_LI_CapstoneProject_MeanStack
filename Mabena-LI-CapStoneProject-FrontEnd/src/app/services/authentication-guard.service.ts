@@ -18,6 +18,9 @@ export class AuthenticationGuardService {
       return false;
   }
 
+  
+
+
   isLoggedIn(): boolean {
     if(localStorage.getItem('isLoggedIn')=="true")
     {
@@ -26,11 +29,11 @@ export class AuthenticationGuardService {
     
     return false;
     }
-
-
+    
     logOut()
     {
       localStorage.removeItem('isLoggedIn');
+    
     }  
 }
 

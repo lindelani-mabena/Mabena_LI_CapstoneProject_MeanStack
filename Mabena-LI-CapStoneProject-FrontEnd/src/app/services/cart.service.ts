@@ -23,7 +23,7 @@ export class CartService {
 
   retrieveCartItemsFromLocalStorage()
   {
-    this.productItems =JSON.parse(localStorage.getItem('savedItems'));
+    this.productItems =JSON.parse(localStorage.getItem('savedItems')) ??[];
     return this.productItems;
   }
 

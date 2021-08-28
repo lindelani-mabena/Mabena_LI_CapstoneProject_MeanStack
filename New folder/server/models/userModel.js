@@ -9,9 +9,8 @@ var userSchema = mongoose.Schema({
         phoneNumber: Number,
         created_at:
         {
-                type:Date,
-                default:Date.now
+          type:Date,
+          default:Date.now
         }
 });
-
 module.exports = mongoose.model('User', userSchema);

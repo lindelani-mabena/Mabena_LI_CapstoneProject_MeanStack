@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { CartService } from '../services/cart.service';
 export class CartComponent implements OnInit {
 
   productItems = [];
-  constructor(private _CartService:CartService) { }
+  constructor(private _CartService:CartService, private _Router:Router) { }
 
   ngOnInit(): void {
   this.productItems= this._CartService.retrieveCartItemsFromLocalStorage();
@@ -22,6 +23,7 @@ export class CartComponent implements OnInit {
   EmptyCart()
   {
     this._CartService.deleteCartItems();
+    this._Router.navigate(['/products']);
   }
 
   removeFromCart(id)

@@ -7,10 +7,11 @@
           <li class="nav-item"><a routerLink="products" class="btn nav-link link-dark px-2">View products</a></li>
           <li class="nav-item"><a routerLink="cart" class="btn nav-link link-dark px-2">Cart</a></li>
           <li class="nav-item"><a routerLink="contact" class="btn nav-link link-dark px-2">Contact</a></li>
-          <li class="nav-item"><a routerLink="add-book" class="btn nav-link link-dark px-2">Manage Products</a></li> <!-- *ngIf="adminLoggedIn" -->
+          <li class="nav-item"><a routerLink="admin-page" class="btn nav-link link-dark px-2">Admin Dashboard</a></li> <!-- *ngIf="adminLoggedIn" -->
           <!--<li class="nav-item"><a routerLink="update-book" *ngIf="adminLoggedIn"
                   class="btn nav-link link-dark px-2">Update book</a></li> -->
       </ul>
+
       <ul class="nav">
           <!--  <li class="nav-item" *ngIf="loggedIn!=true"><a routerLink="login" class="btn nav-link link-dark px-2"
           (click)="btnLoginLink()">Login</a></li>
@@ -26,7 +27,7 @@
           <li class="nav-item"><a routerLink="update-profile" class="btn nav-link link-dark px-2">Update profile</a>
           </li>
           <!--*ngIf="!loggedIn"-->
-          <li class="nav-item"><a href="#" class="btn nav-link link-dark px-2">Logout</a></li>
+          <li class="nav-item"><a (click)="logout()" class="btn nav-link link-dark px-2">Logout</a></li>
           <!--*ngIf="loggedIn"-->
       </ul>
   </div>
@@ -37,7 +38,7 @@
           <svg class="bi me-2" width="40" height="32">
               <use xlink:href="#bootstrap"></use>
           </svg>
-          <span class="fs-4">Student Online Library</span>
+          <span class="fs-4">Browse n Pay</span>
       </a>
   </div>
 </header>
@@ -58,12 +59,12 @@
           <div class="col-lg-3 mb-6">
               <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
                   aria-label="Bootstrap">
-                  <span class="fs-5">Student Online Library</span>
+                  <span class="fs-5">Browse n Pay</span>
               </a>
               <ul class="list-unstyled small text-muted">
                   <li class="mb-2">This Student Online application was designed and developed by InnoCodez Full Stack
                       developer using
-                      various software development technologies and frameworks for the Deviare/Simplilearn phase 4
+                      various software development technologies and frameworks for the Deviare/Simplilearn capstone
                       project.</li>
                   <li class="mb-2">This project is still under alpha development phase </li>
                   <li class="mb-2">Currently v1.0.0.</li>
